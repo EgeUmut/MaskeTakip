@@ -16,9 +16,7 @@ namespace Workaround
             string ogrenci2 = "Mehmet";
             string ogrenci3 = "Ali";
 
-            //Console.WriteLine(ogrenci1);
-            //Console.WriteLine(ogrenci2);
-            //Console.WriteLine(ogrenci3);
+            Console.WriteLine("-------------------");
 
             string[] ogrenciler = new string[3];
             ogrenciler[0] = "Yasin";
@@ -61,6 +59,17 @@ namespace Workaround
             PttManager pttManager = new PttManager(new PersonManager());
             pttManager.GiveMask(person1);
             Console.ReadLine();
+
+            Console.WriteLine("-------------------");
+
+            Person person = new Person();
+
+            person.NationalIdentity = 12345678901;
+            person.FirstName = "Test";
+            person.LastName = "Test";
+            person.DateOfBirthYear = 1994;
+
+            pttManager.GiveMask(person);
         }
         static void SelamVer(string isim="isminiz")
         {
